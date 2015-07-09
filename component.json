@@ -8,7 +8,8 @@
     ],
     "shim": {
         "angular.js": {
-            "deps": ["jquery"]
+            "deps": ["jquery"],
+            "exports": "window.angular"
         }
     }
 }
