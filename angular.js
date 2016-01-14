@@ -18657,8 +18657,7 @@ var requiredDirective = function() {
       ctrl.$parsers.unshift(validator);
 
       attr.$observe('required', function() {
-        //validator(ctrl.$viewValue);
-        ctrl.$setViewValue(ctrl.$viewValue);
+        validator(ctrl.$viewValue);
       });
     }
   };
