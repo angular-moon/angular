@@ -9202,6 +9202,8 @@ function parseAppUrl(relativeUrl, locationObj, appBase) {
  *                   expected string.
  */
 function beginsWith(begin, whole) {
+  //fix whole===undefined bug, 2016-9-7
+  if (!whole) return '';
   if (whole.indexOf(begin) === 0) {
     return whole.substr(begin.length);
   }
